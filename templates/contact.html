@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block content %}
+<h1> Contact</h1>
+<h3> {{ title|capfirst|upper }}</h3>
+<h1>this is a template</h1>
+
+<p>
+    {{ my_number|capfirst}}
+    {% comment %} {{ my_list|capfirst}} {% endcomment %}
+</p>
+<p>
+    <ul>
+        {{ my_number }}, {{ my_text }}, {{ my_list }} 
+        {% for my_sub in my_list %} 
+        <li> {{ forloop.counter}}
+            {{ my_sub }} 
+        </li>
+        {% endfor %}
+        </ul>
+</p>
+{% endblock %}
